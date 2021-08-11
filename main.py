@@ -1,11 +1,6 @@
-import pandas as pd
-import numpy as np
-import pandas_datareader as pdr
-import matplotlib.pyplot as plt
-from multiprocessing import Pool
 import time
+import pandas as pd
 from Portfolio import Portfolio
-from TradingSystem import TradingSystem
 import TRADECONFIG
 
 # I was getting a weird error with numpy and plotting, this next line seemed to fix.

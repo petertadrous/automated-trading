@@ -2,8 +2,6 @@ import pandas as pd
 import numpy as np
 import pandas_datareader as pdr
 import matplotlib.pyplot as plt
-from multiprocessing import Pool
-import time
 
 # I was getting a weird error with numpy and plotting, this next line seemed to fix.
 pd.plotting.register_matplotlib_converters()
