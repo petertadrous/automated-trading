@@ -1,9 +1,9 @@
 import pandas as pd
-import numpy as np
-import pandas_datareader as pdr
-import matplotlib.pyplot as plt
-from multiprocessing import Pool
-import time
+try:
+    from multiprocessing import Pool
+    CAN_USE_MP = True
+except:
+    CAN_USE_MP = False
 from TradingSystem import TradingSystem
 
 # I was getting a weird error with numpy and plotting, this next line seemed to fix.
@@ -29,17 +29,21 @@ class Portfolio(object):
     
     # Takes a multiprocessing approach of previous function for better performance
     def mp_trade(self):
-        print('Beginning multiprocessing.')
-        try:
-            pool = Pool()
-            self.ts_list = []
-            ts_res = pool.map(self.find_best_moving_averages, self.ticker_list)
-            for res in ts_res:
-                self.trading_systems[res[0].symbol] = res[0]
-                self.portfolio_list.append(res[1])
-        finally:
-            pool.close()
-            pool.join()
+        if CAN_USE_MP:
+            print('Beginning multiprocessing.')
+            try:
+                pool = Pool()
+                self.ts_list = []
+                ts_res = pool.map(self.find_best_moving_averages, self.ticker_list)
+                for res in ts_res:
+                    self.trading_systems[res[0].symbol] = res[0]
+                    self.portfolio_list.append(res[1])
+            finally:
+                pool.close()
+                pool.join()
+        else:
+            print('Cannot use multiprocessing because the package is not installed.')
+            self.trade()
     
     # Programatically calculates each moving average in given winddow and finds optimal short and long
     def find_best_moving_averages(self,ticker):
