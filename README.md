@@ -23,11 +23,21 @@ One optional package (for improved speed) is:
 
 ## Usage
 
-
+1. Clone this repo
+```git clone https://github.com/petertadrous/automated-trading.git```
+2. Install the required packages
+```pip install -U -r requirements.txt```
+3. Optionally install additional package
+```pip install -U -r optional-requirements.txt```
+4. Modify the parameters `TRADECONFIG.py`
+5. Run the main script
+```python main.py```
 
 ## License
 
+MIT License
 
+Copyright (c) 2021 petertadrous
 
 ## Contact
 
