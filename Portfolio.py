@@ -11,11 +11,13 @@ pd.plotting.register_matplotlib_converters()
 
 # Portfolio class, takes a list of tickers, a start date, end date, max short, and max long to create a portfolio
 class Portfolio(object):
-    def __init__(self,tlist,start,end,max_short,max_long):
+    def __init__(self,tlist,start,end,min_short,max_short,min_long_diff,max_long):
         self.ticker_list = tlist
         self.start = start
         self.end = end
+        self.min_short = min_short
         self.max_short = max_short + 1
+        self.min_long_difference = min_long_diff
         self.max_long = max_long + 1
         self.portfolio_list = []
         self.trading_systems = {}
@@ -54,8 +56,8 @@ class Portfolio(object):
         ts_perf = 0
         print('Creating instance of trading system for {}.'.format(ticker))
         ts = TradingSystem(ticker,self.start,self.end,optimal_short,optimal_long)
-        for short in range(2,self.max_short):
-            for long in range(short+3,self.max_long):
+        for short in range(self.min_short,self.max_short):
+            for long in range(short+self.min_long_difference,self.max_long):
                 ts.short = short
                 ts.long = long
                 ts.trade()

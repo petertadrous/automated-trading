@@ -9,14 +9,15 @@ pd.plotting.register_matplotlib_converters()
 def main():
     start_time = time.time()
 
-    tlist = TRADECONFIG.TICKER_LIST
-    start = TRADECONFIG.START_DATE
-    end = TRADECONFIG.END_DATE
-    max_short = TRADECONFIG.MAX_SHORT
-    max_long = TRADECONFIG.MAX_LONG
-    display_individual_plots = TRADECONFIG.DISPLAY_INDIVIDUAL_PLOTS
-
-    pf = Portfolio(tlist,start,end,max_short,max_long)
+    pf = Portfolio(
+        tlist=TRADECONFIG.TICKER_LIST,
+        start=TRADECONFIG.START_DATE,
+        end=TRADECONFIG.END_DATE,
+        min_short=TRADECONFIG.MIN_SHORT,
+        max_short=TRADECONFIG.MAX_SHORT,
+        min_long_diff=TRADECONFIG.MIN_LONG_DIFFERENCE,
+        max_long=TRADECONFIG.MAX_LONG
+    )
     
     if TRADECONFIG.USE_MULTIPROCESSING:
         # mp_trade() doesn't work on windows because the spawn method is 'spawn' not 'fork'
@@ -24,7 +25,7 @@ def main():
     else:
         pf.trade()
     pf.create_portfolio()
-    pf.print_results(display_individual_plots)
+    pf.print_results(TRADECONFIG.DISPLAY_INDIVIDUAL_PLOTS)
 
     end_time = time.time()
     run_time = end_time - start_time
