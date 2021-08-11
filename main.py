@@ -17,9 +17,12 @@ def main():
     display_individual_plots = TRADECONFIG.DISPLAY_INDIVIDUAL_PLOTS
 
     pf = Portfolio(tlist,start,end,max_short,max_long)
-    # Can use pf.trade() or multiprocessing computation with pf.mp_trade().
-    # mp_trade() doesn't work on windows because the spawn method is 'spawn' not 'fork'
-    pf.mp_trade()
+    
+    if TRADECONFIG.USE_MULTIPROCESSING:
+        # mp_trade() doesn't work on windows because the spawn method is 'spawn' not 'fork'
+        pf.mp_trade()
+    else:
+        pf.trade()
     pf.create_portfolio()
     pf.print_results(display_individual_plots)
 
