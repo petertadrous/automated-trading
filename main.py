@@ -4,7 +4,7 @@ matplotlib.use('TkAgg')
 
 import time
 import pandas as pd
-from src.portfolio import TradingPortfolio
+from src.portfolio import PortfolioTrader
 import yaml
 
 # I was getting a weird error with numpy and plotting, this next line seemed to fix.
@@ -15,7 +15,7 @@ def main():
         TRADECONFIG = yaml.safe_load(f)
     start_time = time.time()
 
-    pf = TradingPortfolio(
+    pf = PortfolioTrader(
         symbols=TRADECONFIG['TICKER_LIST'],
         start_date=TRADECONFIG['START_DATE'],
         end_date=TRADECONFIG['END_DATE'],

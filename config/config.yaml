@@ -17,12 +17,12 @@ END_DATE: '2022-12-31'
 
 # The minimum and maximum (inclusive) 'short' to check between
 MIN_SHORT: 2
-MAX_SHORT: 120
+MAX_SHORT: 150
 
 # The minimum 'long' to check is the current 'short' in the loop plus this value
-MIN_LONG_DIFFERENCE: 1
+MIN_LONG_DIFFERENCE: 50
 # The maximum 'long' to check
-MAX_LONG: 200
+MAX_LONG: 250
 
 # Whether or not to display the individual plots for each ticker
 DISPLAY_INDIVIDUAL_PLOTS: True

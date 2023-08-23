@@ -20,7 +20,7 @@ except:
 pd.plotting.register_matplotlib_converters()
 
 @dataclass
-class TradingPortfolio(TradingStrategy):
+class PortfolioTrader(TradingStrategy):
     
     symbols: List[str]
     min_short: int = 2
