@@ -1,0 +1,132 @@
+Created portfolio.
+['OXY', 'C', 'DIS', 'PYPL', 'DOCU', 'XOM', 'TSM', 'DEO', 'AMD', 'EL.PA']
+
+
+Beginning multiprocessing.
+Creating instance of trading system for C.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for AMD.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for DOCU.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for PYPL.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for EL.PA.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for TSM.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for DEO.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for DIS.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for XOM.
+[*********************100%%**********************]  1 of 1 completedCreating instance of trading system for OXY.
+[*********************100%%**********************]  1 of 1 completed
+Found optimal moving averages for C     .	Short: 2, Long: 4
+
+Found optimal moving averages for AMD   .	Short: 2, Long: 3
+
+Found optimal moving averages for DIS   .	Short: 2, Long: 3
+
+Found optimal moving averages for PYPL  .	Short: 2, Long: 3
+
+Found optimal moving averages for TSM   .	Short: 2, Long: 3
+
+Found optimal moving averages for DEO   .	Short: 2, Long: 4
+
+Found optimal moving averages for EL.PA .	Short: 2, Long: 3
+
+Found optimal moving averages for DOCU  .	Short: 2, Long: 3
+
+Found optimal moving averages for XOM   .	Short: 2, Long: 3
+
+Found optimal moving averages for OXY   .	Short: 2, Long: 3
+[*********************100%%**********************]  1 of 1 completed
+"OXY"
+Our strategy :   733.67%
+Baseline     :    -1.06%
+The trading system outperformed baseline by:   742.64%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"C"
+Our strategy :   406.78%
+Baseline     :   -33.82%
+The trading system outperformed baseline by:   665.72%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"DIS"
+Our strategy :   339.43%
+Baseline     :   -22.43%
+The trading system outperformed baseline by:   466.50%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"PYPL"
+Our strategy :   525.60%
+Baseline     :    -3.61%
+The trading system outperformed baseline by:   549.05%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"DOCU"
+Our strategy :   796.37%
+Baseline     :    33.28%
+The trading system outperformed baseline by:   572.53%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"XOM"
+Our strategy :   471.06%
+Baseline     :    52.30%
+The trading system outperformed baseline by:   274.96%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"TSM"
+Our strategy :   446.63%
+Baseline     :    74.21%
+The trading system outperformed baseline by:   213.78%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"DEO"
+Our strategy :   241.22%
+Baseline     :    32.01%
+The trading system outperformed baseline by:   158.48%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"AMD"
+Our strategy :   870.88%
+Baseline     :   177.48%
+The trading system outperformed baseline by:   249.90%
+
+***************************************************************************
+
+[*********************100%%**********************]  1 of 1 completed
+"EL.PA"
+Our strategy :   373.20%
+Baseline     :    47.25%
+The trading system outperformed baseline by:   221.35%
+
+***************************************************************************
+
+
+
+On average, the trading system portfolio outperformed traditional portfolio by:   612.40%
+  Ticker  Start Price       Start  ...   Managed  % Difference    $ Profit
+0    OXY    63.289646  2018-01-01  ...  7.336682    742.641165  527.625652
+1      C    61.415768  2018-01-01  ...  4.067826    665.716982  311.244394
+2    DIS   108.726051  2018-01-01  ...  3.394315    466.499351  477.776524
+3   PYPL    73.839996  2018-01-01  ...  5.255992    549.047197  461.942403
+4   DOCU    39.730000  2018-01-01  ...  7.963722    572.531021  356.128662
+5    XOM    63.798695  2018-01-01  ...  4.710573    274.955149  364.327134
+6    TSM    35.135418  2018-01-01  ...  4.466252    213.776702  192.059036
+7    DEO   128.235275  2018-01-01  ...  2.412152    158.476533  437.558221
+8    AMD    10.980000  2018-01-01  ...  8.708824    249.896897  106.602882
+9  EL.PA   103.624001  2018-01-01  ...  3.732030    221.350296  490.351886
+
+[10 rows x 10 columns]
+Portfolio took        0.5 minutes to run.
