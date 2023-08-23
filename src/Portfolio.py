@@ -4,7 +4,7 @@ try:
     CAN_USE_MP = True
 except:
     CAN_USE_MP = False
-from TradingSystem import TradingSystem
+from src.TradingSystem import TradingSystem
 
 # I was getting a weird error with numpy and plotting, this next line seemed to fix.
 pd.plotting.register_matplotlib_converters()

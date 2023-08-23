@@ -1,7 +1,7 @@
 import time
 import pandas as pd
-from Portfolio import Portfolio
-import TRADECONFIG
+from src.Portfolio import Portfolio
+from config import TRADECONFIG
 
 # I was getting a weird error with numpy and plotting, this next line seemed to fix.
 pd.plotting.register_matplotlib_converters()
